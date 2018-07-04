@@ -6,10 +6,14 @@ namespace DotNetDataStructuresAndLINQ
     {
         static void Main(string[] args)
         {
-            var posts = new WebClient().GetAddressList();
-            Console.WriteLine(posts.Count);
+            WebClient wc = new WebClient();
 
-            Console.WriteLine("Hello World!");
+            QueryStore qs = new QueryStore(wc);
+
+
+
+           
+
             Console.ReadKey();
         }
     }

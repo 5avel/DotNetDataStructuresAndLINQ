@@ -7,7 +7,16 @@ using System.Threading.Tasks;
 
 namespace DotNetDataStructuresAndLINQ
 {
-    public class WebClient
+    public interface IWebClient
+    {
+        List<User> GetUsersList();
+        List<Post> GetPostsList();
+        List<Comment> GetCommentsList();
+        List<Todo> GetTodosList();
+        List<Addres> GetAddressList();
+    }
+
+    public class WebClient : IWebClient
     {
         private string baseAddress = "https://5b128555d50a5c0014ef1204.mockapi.io/";
 

@@ -6,7 +6,7 @@ namespace DotNetDataStructuresAndLINQ.Model
 {
     public class User
     {
-        public string Id { set; get; }
+        public int Id { set; get; }
         public DateTime CreatedAt { set; get; }
         public string Name { set; get; }
         public string Avatar { set; get; }

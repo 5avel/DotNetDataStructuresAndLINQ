@@ -12,6 +12,7 @@ namespace DotNetDataStructuresAndLINQ.Model
         public string Body { set; get; }
         public int UserId { set; get; }
         public int Likes { set; get; }
+        public IEnumerable<Comment> Comments { get; set; }
 
     }
 }
