@@ -22,7 +22,7 @@ namespace DotNetDataStructuresAndLINQ
 
         private async Task<string> GetJsonDataAsync(string endpoint)
         {
-            Console.WriteLine("Waiting for a response from the server Users");
+            Console.WriteLine($"Waiting for a response from the server {endpoint}");
             using (var client = new HttpClient())
             {
                 try
