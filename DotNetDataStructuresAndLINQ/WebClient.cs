@@ -7,13 +7,22 @@ using System.Threading.Tasks;
 
 namespace DotNetDataStructuresAndLINQ
 {
-    public class WebClient
+    public interface IWebClient
+    {
+        List<User> GetUsersList();
+        List<Post> GetPostsList();
+        List<Comment> GetCommentsList();
+        List<Todo> GetTodosList();
+        List<Addres> GetAddressList();
+    }
+
+    public class WebClient : IWebClient
     {
         private string baseAddress = "https://5b128555d50a5c0014ef1204.mockapi.io/";
 
         private async Task<string> GetJsonDataAsync(string endpoint)
         {
-            Console.WriteLine("Waiting for a response from the server Users");
+            Console.WriteLine($"Waiting for a response from the server {endpoint}");
             using (var client = new HttpClient())
             {
                 try
